@@ -8,6 +8,7 @@ A React-based interactive map visualizing schools across Greece using open data 
 
 This project brings together information about **all schools in Greece** on one easy-to-explore map. It leverages open datasets provided by the Greek Ministry of Education ([data.gov.gr - minedu\_schools](https://data.gov.gr/datasets/minedu_schools)) to display school locations, types, and contact details.
 
+
 **Note:** This is an independent, non-official project aimed at making public educational data more accessible and user-friendly.
 
 ---
@@ -21,13 +22,8 @@ This project brings together information about **all schools in Greece** on one 
 * External links to Google Maps for navigation
 * Responsive design with Tailwind CSS styling
 
----
-
-## Demo
 
 
-
----
 
 ## Installation
 
