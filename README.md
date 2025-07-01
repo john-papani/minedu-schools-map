@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Minedu Schools Map
 
-## Getting Started
+A React-based interactive map visualizing schools across Greece using open data from the Greek Government’s Open Data Portal.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This project brings together information about **all schools in Greece** on one easy-to-explore map. It leverages open datasets provided by the Greek Ministry of Education ([data.gov.gr - minedu\_schools](https://data.gov.gr/datasets/minedu_schools)) to display school locations, types, and contact details.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+**Note:** This is an independent, non-official project aimed at making public educational data more accessible and user-friendly.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+* Interactive map with clustered school markers
+* Dynamic filtering by school type
+* Popup info boxes showing school details (address, phone, email)
+* Zoom-based marker loading for performance
+* External links to Google Maps for navigation
+* Responsive design with Tailwind CSS styling
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Demo
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/john-papani/minedu-schools-map
+   cd minedu-schools-map
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser at `http://localhost:3000`
+
+---
+
+## Usage
+
+* Use the filters to select which school types to display.
+* Pan and zoom the map to load visible schools dynamically.
+* Click on markers to see detailed school info and get a link to Google Maps.
+* Explore education distribution throughout Greece!
+
+---
+
+## Data Source
+
+* [Greek Government Open Data Portal - Minedu Schools Dataset](https://data.gov.gr/datasets/minedu_schools)
+
+---
+
+## Technologies Used
+
+* React & React Leaflet
+* Leaflet Marker Cluster plugin
+* RBush spatial index for performance
+* Tailwind CSS for styling
+* Next.js

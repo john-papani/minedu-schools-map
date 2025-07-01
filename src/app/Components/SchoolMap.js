@@ -179,9 +179,7 @@ export default function SchoolMap() {
       style={{ height: "80vh", width: "100%" }}
     >
       <TileLayer
-        // url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        // url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
-        url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}.png"
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
       />
       <VisibleMarkers />
