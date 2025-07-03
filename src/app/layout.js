@@ -13,10 +13,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// export const metadata = {
-//   title: "Minedu Schools Map",
-//   description: "Explore schools across Greece using open data",
-// };
+export const metadata = {
+  title: "Minedu Schools Map",
+  description: "Explore schools across Greece using open data",
+  icons: {
+    icon: "https://www.gov.gr/gov_logos-08_16x16_favicon.ico",
+  },
+};
 
 export default function RootLayout({ children }) {
   return (
