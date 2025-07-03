@@ -109,7 +109,7 @@ function VisibleMarkers() {
           top: 10,
           left: "50%",
           transform: "translateX(-50%)",
-          zIndex: 1000,
+          zIndex: 10,
           background: "rgba(255,255,255,0.9)",
           padding: "8px 16px",
           borderRadius: 6,
@@ -135,7 +135,7 @@ function VisibleMarkers() {
             clipRule="evenodd"
           />
         </svg>
-        <p className="italic text-base">Please zoom in to see schools.</p>
+        <p className="italic text-base">Please zoom in/out to see schools.</p>
       </div>
     );
   }
