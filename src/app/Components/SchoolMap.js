@@ -176,11 +176,10 @@ export default function SchoolMap({ showAllSchools }) {
     <MapContainer
       center={center}
       zoom={11}
-      style={{ height: "80vh", width: "100%" }}
+      className="h-[72vh] lg:h-[80vh] w-full"
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
       />
       <VisibleMarkers showAllSchools={showAllSchools} />
     </MapContainer>

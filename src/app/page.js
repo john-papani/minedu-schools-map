@@ -9,12 +9,12 @@ const SchoolMap = dynamic(() => import("./Components/SchoolMap"), {
 export default function Home() {
   const [showAllSchools, setShowAllSchools] = useState(true);
   return (
-    <div className="flex flex-col lg:gap-2 lg:flex-row-reverse  items-center justify-center min-h-[95vh] bg-[#F2F2F2] pt-[5%] lg:pt-[3%]">
-      <div className="w-full p-4 bg-white shadow-md rounded-lg">
+    <div className="flex flex-col lg:gap-2 lg:flex-row-reverse  items-center justify-center min-h-[90vh] md:min-h-[95vh] bg-[#F2F2F2] pt-[10vh] lg:pt-[3%]">
+      <div className="w-full  p-4 bg-white shadow-md rounded-lg">
         <SchoolMap showAllSchools={showAllSchools} />
       </div>
 
-      <div class="flex text-black bg-[#cdccce] border border-[#003375] rounded-lg p-4 mt-4 w-[10%]">
+      <div class="flex text-black bg-[#cdccce] border border-[#003375] rounded-lg p-4 mt-4 w-3/4 md:w-[10%]">
         <div class="flex items-center h-5">
           <input
             id="helper-checkbox"
