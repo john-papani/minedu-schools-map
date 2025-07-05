@@ -27,7 +27,7 @@ const indexedSchools = schools
   }));
 index.load(indexedSchools);
 
-function VisibleMarkers() {
+function VisibleMarkers({ showAllSchools }) {
   const map = useMap();
   const [visibleSchools, setVisibleSchools] = useState([]);
   const allowedSubtypes = [
@@ -68,7 +68,7 @@ function VisibleMarkers() {
       allowedSubtypes.includes(school.school_subtype)
     );
 
-    setVisibleSchools(mainSchoolVisible);
+    setVisibleSchools(showAllSchools ? allSchoolVisible : mainSchoolVisible);
     setLoading(false); // done loading
   };
 
@@ -76,7 +76,7 @@ function VisibleMarkers() {
     updateVisibleSchools();
     map.on("moveend", updateVisibleSchools);
     return () => map.off("moveend", updateVisibleSchools);
-  }, [map]);
+  }, [map,showAllSchools]);
 
   // Show loading spinner
   if (loading) {
@@ -147,9 +147,9 @@ function VisibleMarkers() {
           <Popup>
             <strong>{school.school_name}</strong>
             <br />
-            {school.street_address}, {school.zip_code}
+            {school.school_district}
             <br />
-            {school.school_code}
+            {school.street_address}, {school.zip_code}
             <br />
            {school.phone_number?.toString().split(".")[0]}
             <br />
@@ -170,7 +170,7 @@ function VisibleMarkers() {
   );
 }
 
-export default function SchoolMap() {
+export default function SchoolMap({ showAllSchools }) {
   const center = [38.0795036, 23.7689699];
   return (
     <MapContainer
@@ -182,7 +182,7 @@ export default function SchoolMap() {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
       />
-      <VisibleMarkers />
+      <VisibleMarkers showAllSchools={showAllSchools} />
     </MapContainer>
   );
 }
